@@ -1,0 +1,12 @@
+steps:
+  # 构建 Docker 镜像
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/$PROJECT_ID/your-app-name:$SHORT_SHA', '.']
+
+  # 推送镜像到 Google Container Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/$PROJECT_ID/your-app-name:$SHORT_SHA']
+
+# 在 Cloud Build 日志中显示构建的镜像
+images:
+  - 'gcr.io/$PROJECT_ID/your-app-name:$SHORT_SHA'
