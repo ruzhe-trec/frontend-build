@@ -1,0 +1,18 @@
+// 定义 ant-table 的样式
+.ant-table {
+  // 设置表格主体的滚动条样式
+  .ant-table-body {
+    margin-right: -10px;
+    overflow-y: scroll;
+  }
+  // 强制固定右侧的表格单元格，通过将 right 属性设置为 0，使其贴紧右侧边框
+  .ant-table-cell-fix-right {
+    right: 0 !important;
+  }
+}
+
+// 定义垂直方向的子菜单的样式
+.ant-menu.ant-menu-sub.ant-menu-vertical {
+  // 移除子菜单的最大高度限制，使其可以完全展开
+  max-height: initial !important;
+}
