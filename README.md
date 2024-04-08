@@ -119,3 +119,7 @@ npm run test:unit
 ```
 npm run lint
 ```
+
+git clone https://github.com/195440/frontend-build.git -b dev && \
+ cd frontend-build && \
+ gcloud builds submit --config cloudbuild.yaml --region=global
