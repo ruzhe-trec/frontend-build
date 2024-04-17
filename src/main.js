@@ -22,4 +22,3 @@ app.directive('permission', permission);
 // 在 Vue 实例上使用 Ant Design Vue 组件库，Pinia 状态管理库，路由配置，然后挂载到 #root 元素上
 app.use(Antd).use(pinia).use(router).mount('#root');
 
-// 测试 code review 1
