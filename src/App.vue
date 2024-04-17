@@ -42,7 +42,7 @@ dayjs.locale('zh-cn');
  */
 dayjs.updateLocale('zh-cn', {
   weekStart: 1,
-  yearStart: 5
+  yearStart: 4
 });
 
 // 使用 useConfigStore 方法得到配置
