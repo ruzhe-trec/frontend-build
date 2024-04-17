@@ -21,6 +21,18 @@ import { Loading } from '@/components';
 // 引入 useConfigStore 方法
 import { useConfigStore } from '@/store';
 
+import dayjs from 'dayjs';
+// 导入 updateLocale 插件以允许修改本地化设置
+import updateLocale from 'dayjs/plugin/updateLocale';
+// 导入中文（中国）本地化配置
+import 'dayjs/locale/zh-cn';
+
+// 启用 updateLocale 插件
+dayjs.extend(updateLocale);
+
+// 设置 dayjs 的本地化为中文（中国）
+dayjs.locale('zh-cn');
+
 // 使用 useConfigStore 方法得到配置
 const configStore = useConfigStore();
 
