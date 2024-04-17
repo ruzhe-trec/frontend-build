@@ -1,0 +1,59 @@
+{
+  "private": false,
+  "name": "frontend-utils",
+  "version": "0.2.16",
+  "scripts": {
+    "start": "dumi dev",
+    "docs": "node pack-pre.js && npm run build && dumi build && node pack.js",
+    "build": "father-build",
+    "build-no-min": "father-build --no-minify",
+    "release": "npm run docs && npm publish",
+    "test": "umi-test",
+    "cover": "umi-test --coverage"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "typings": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "",
+    "branch": "main"
+  },
+  "devDependencies": {
+    "@types/big.js": "^6.1.3",
+    "@types/jest": "^27.5.1",
+    "@types/lodash": "^4.14.182",
+    "@umijs/test": "^3.0.5",
+    "adm-zip": "^0.5.9",
+    "big.js": "^6.1.1",
+    "clipboard-copy": "^4.0.1",
+    "dayjs": "^1.11.2",
+    "dumi": "^1.1.0",
+    "father-build": "^1.19.1",
+    "gh-pages": "^3.0.0",
+    "js-base64": "^3.7.5",
+    "lint-staged": "^10.0.7",
+    "lodash": "^4.17.21",
+    "prettier": "^1.19.1",
+    "react": "^16.12.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "yorkie": "^2.0.0"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts}",
+      "src/**/declare.ts",
+      "!src/.umi/**"
+    ]
+  },
+  "files": [
+    "dist"
+  ],
+  "browserslist": [
+    "last 2 version",
+    "> 1%",
+    "maintained node versions",
+    "not dead"
+  ]
+}

@@ -1,0 +1,114 @@
+@numMax: 100; //最大上限
+@numStep: 1; //渐变值
+
+/* font-size */
+.f-(@numMax);
+
+.f-(@n, @i: 0) when (@i =< @n) {
+  .f-@{i} {
+    font-size: 0px + @i !important;
+  }
+  .f-(@n, (@i+@numStep));
+}
+
+/* margin */
+.m-(@numMax);
+
+.m-(@n, @i: 0) when (@i =< @n) {
+  .m-@{i} {
+    margin: 0px + @i !important;
+  }
+  .m-(@n, (@i+@numStep));
+}
+
+.mt-(@numMax);
+
+.mt-(@n, @i: 0) when (@i =< @n) {
+  .mt-@{i} {
+    margin-top: 0px + @i !important;
+  }
+  .mt-(@n, (@i+@numStep));
+}
+
+.ml-(@numMax);
+
+.ml-(@n, @i: 0) when (@i =< @n) {
+  .ml-@{i} {
+    margin-left: 0px + @i !important;
+  }
+  .ml-(@n, (@i+@numStep));
+}
+
+.mr-(@numMax);
+
+.mr-(@n, @i: 0) when (@i =< @n) {
+  .mr-@{i} {
+    margin-right: 0px + @i !important;
+  }
+  .mr-(@n, (@i+@numStep));
+}
+
+.mb-(@numMax);
+
+.mb-(@n, @i: 0) when (@i =< @n) {
+  .mb-@{i} {
+    margin-bottom: 0px + @i !important;
+  }
+  .mb-(@n, (@i+@numStep));
+}
+
+/* padding */
+.p-(@numMax);
+
+.p-(@n, @i: 0) when (@i =< @n) {
+  .p-@{i} {
+    padding: 0px + @i !important;
+  }
+  .p-(@n, (@i+@numStep));
+}
+
+.pt-(@numMax);
+
+.pt-(@n, @i: 0) when (@i =< @n) {
+  .pt-@{i} {
+    padding-top: 0px + @i !important;
+  }
+  .pt-(@n, (@i+@numStep));
+}
+
+.pl-(@numMax);
+
+.pl-(@n, @i: 0) when (@i =< @n) {
+  .pl-@{i} {
+    padding-left: 0px + @i !important;
+  }
+  .pl-(@n, (@i+@numStep));
+}
+
+.pr-(@numMax);
+
+.pr-(@n, @i: 0) when (@i =< @n) {
+  .pr-@{i} {
+    padding-right: 0px + @i !important;
+  }
+  .pr-(@n, (@i+@numStep));
+}
+
+.pb-(@numMax);
+
+.pb-(@n, @i: 0) when (@i =< @n) {
+  .pb-@{i} {
+    padding-bottom: 0px + @i !important;
+  }
+  .pb-(@n, (@i+@numStep));
+}
+
+.atr {
+  text-align: right !important;
+}
+
+.ato {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

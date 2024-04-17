@@ -1,0 +1,19 @@
+steps:
+  # 第一步：安装依赖项
+  - name: 'gcr.io/cloud-builders/npm'
+    args: ['install']
+
+  # 第二步：构建项目
+  - name: 'gcr.io/cloud-builders/npm'
+    args: ['run', 'build']
+
+  # 第三步：构建 Docker 镜像，包括 Nginx 和构建产物
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/$PROJECT_ID/my-vite-app', '.']
+
+  # 第四步：推送 Docker 镜像到 Google Container Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/$PROJECT_ID/my-vite-app']
+
+# 在这里，我们需要确保已经有 Dockerfile 准备好
+images: ['gcr.io/$PROJECT_ID/my-vite-app']
