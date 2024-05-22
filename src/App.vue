@@ -38,11 +38,11 @@ dayjs.locale('zh-cn');
  * @param {string} locale - 本地化配置的语言标识符，这里是 'zh-cn' 中文（中国）。
  * @param {object} config - 包含本地化修改参数的对象。
  * @param {number} config.weekStart - 一周的起始日，这里设置为 1 表示周一为每周的开始。
- * @param {number} config.yearStart - 定义一年开始的第几天，这里设置为 4 表示每年的第四天为新年的开始。
+ * @param {number} config.yearStart - 定义一年开始的第几天，这里设置为 5 表示每年的第五天为新年的开始。
  */
 dayjs.updateLocale('zh-cn', {
   weekStart: 1,
-  yearStart: 4
+  yearStart: 5
 });
 
 // 使用 useConfigStore 方法得到配置
